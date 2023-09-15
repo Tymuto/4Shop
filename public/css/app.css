@@ -69,6 +69,14 @@ header{
 	border-bottom: .05rem solid #e5e5e5
 }
 
+.discount{
+	color: red;
+}
+
+.discount span{
+	font-weight: bold;
+}
+
 .product-title{
 	display: flex;
 	justify-content: space-between;
