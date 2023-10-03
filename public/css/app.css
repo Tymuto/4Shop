@@ -120,6 +120,15 @@ span.collapsing{
 	color: white !important;
 }
 
+.edit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-list{
+	list-style-type: none;
+}
+
 @media (max-width: 576px) {
 	h1{
 		font-size: 8vw;
