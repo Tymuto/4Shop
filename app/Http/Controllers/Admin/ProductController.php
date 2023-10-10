@@ -22,7 +22,7 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         return view('admin.products.create')
-            ->with(compact('categories'));
+                ->with(compact('categories'));
     }
 
     public function store(Request $request)
@@ -32,6 +32,7 @@ class ProductController extends Controller
             'price' => 'required|numeric',
             'active' => 'required|boolean',
             'leiding' => 'required|boolean',
+            'category' => 'required',
             'image' => 'nullable|image',
             'description' => 'nullable'
         ]);
@@ -41,6 +42,7 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->active = $request->active;
         $product->leiding = $request->leiding;
+        $product->category_id = $request->category;
         $product->description = $request->description;
         if($request->hasFile('image'))
         {

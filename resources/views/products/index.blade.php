@@ -13,7 +13,7 @@
 							<p>{{ $product->description }}</p>
 						@endunless
 						@if($product->discount > 0)
-							<p class="discount">Nu <span>{{$product->discount}}%</span> korting!</p>
+							<p class="discount">Nu <span>{{$product->discount}}%</span> korting! Originele prijs was <span>{{$product->getAttributes()['price']}}</span></p>
 						@endif
 					</div>
 					<button class="btn btn-primary">Meer info &amp; bestellen</button>
